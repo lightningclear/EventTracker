@@ -42,18 +42,13 @@ public class CampingServiceImpl implements CampingService {
 
 	@Override
 	public Camping create(Camping camp) {
-//		Optional<Camping> camping = campo.findById(id);
-//		if(camping.isPresent()) {
-//			camping.setPost(camping.get());
-//			campo.saveAndFlush(camp);
-//		}
-		return null;
+			return campo.saveAndFlush(camp);
 	}
 
 	@Override
 	public Camping update(int id, Camping camp) {
-		// TODO Auto-generated method stub
-		return null;
+		camp.setId(id);
+		return campo.saveAndFlush(camp);
 	}
 
 	@Override

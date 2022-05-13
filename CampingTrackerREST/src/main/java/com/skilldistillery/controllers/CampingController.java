@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +33,17 @@ public class CampingController {
 		return serv.findById(id); //change
 	}
 	
+	@PostMapping("camp")
+	public Camping create(@RequestBody Camping camp) {
+		return serv.create(camp);
+	}
+	
+	
+	@PutMapping("camp")
+	public Camping update(@RequestBody Camping camp, @PathVariable int id) {
+		return serv.update(id, camp);
+		
+	}
 	
 	
 	@DeleteMapping("camp/{id}")
