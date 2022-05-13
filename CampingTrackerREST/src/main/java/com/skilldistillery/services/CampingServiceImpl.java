@@ -35,9 +35,9 @@ public class CampingServiceImpl implements CampingService {
 		return camp;
 	}
 	
-//	public List<Post> searchPostsByKeyword(String keyword) {
+//	public Camping searchByKeyword(String keyword) {
 //		keyword = "%" + keyword + "%";
-//		return postRepo.findByNameLikeOrTitleLike(keyword, keyword);
+//		return campo.findby(keyword, keyword);
 //	}
 
 	@Override
