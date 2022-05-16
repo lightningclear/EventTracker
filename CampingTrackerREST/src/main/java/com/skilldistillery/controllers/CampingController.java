@@ -22,7 +22,7 @@ public class CampingController {
 	@Autowired
 	CampingService serv;
 
-	@GetMapping("index")
+	@GetMapping("camp")
 	public List<Camping> index(){
 		return serv.index();
 		
@@ -39,7 +39,7 @@ public class CampingController {
 	}
 	
 	
-	@PutMapping("camp")
+	@PutMapping("camp/{id}")
 	public Camping update(@RequestBody Camping camp, @PathVariable int id) {
 		return serv.update(id, camp);
 		
