@@ -1,20 +1,83 @@
-### EventTracker
-# Description
-This project is as much about using JSON and SpringREST as it is handling JSON responses with JavaScript.
+# MidtermProject
+## Midterm Project
 
-### Learning Objectives
-<ul>Adding scripts to a web application</ul>
-<ul>Send asynchronous requests to Java controllers with JavaScript's `XMLHttpRequest</ul>
-<ul>Consume and parse JSON responses with JavaScript</ul>
-<ul>Build HTML with JavaScript</ul>
-<ul>Send POST/PUT/DELETE requests with XMLHttpRequest</ul>  
+<!-- PROJECT LOGO -->
 
-## Lessons Learned
-This project highlights how integrated JSON and REST systems have allowed the programmer to easily utilize and create a C.R.U.D project and during this project i was able to deepen my understanding of how the front end interacts dynamically with users.
+<!-- TABLE OF CONTENTS -->
 
-## Technologies Used
-XMLHttpRequest
-Git
-JavaScript
-Java
-HTML
+<details>
+  <summary>Table of Contents</summary>
+  <ul>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+  </ul>
+      <ul>
+        <li><a href="#technologies-used">Technologies Used</a></li>
+      </ul>
+    </li>
+  <ul>
+    <li><a href="#howitworks">How It Works</a></li>
+  </ul>  
+  <ul>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    </ul>
+
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+REPLACE THE CRUD DESCRIPTIONS
+
+<p>Bet Royale is a Dynamic Web Application that allows the user to perform the following operations on a self-created betting site</p>
+<ol>
+<li><strong><em>C</em></strong>reate - Create a new Event and Wager in the database with the "Create a Event" + "Create a Wager" Button</li>
+<br>
+<li><strong><em>R</em></strong>ead - View the current information for active Events on the site</li>
+<br>
+<li><strong><em>U</em></strong>pdate - Update Previously defined Events and Wagers in the database</li>
+<li><strong><em>D</em></strong>elete - rather than a delete option for the user, events will be Archived for users upon completion </li>
+</ol>
+<!--[![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Technologies Used
+
+-   [Angular]
+-   [Spring Tools 4](https://spring.io/tools)
+-   [Gradle Build Tool](https://gradle.org/install/)
+-   [MAMP Free](https://www.mamp.info/en/mac/)
+-   [Apache Tomcat v8.5](https://tomcat.apache.org/)
+-   [MySQL](https://www.mysql.com/)
+-   [Atom Text Editor](https://atom.io/)
+-   [Bootstrap v5.1](https://getbootstrap.com)
+-   [CSS]()
+-   [JavaScript]()
+-   [GITHUB]()
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact
+
+<strong>Developers on Project</strong>
+
+<h4>Henry Vo</h4>
+<ul>
+<li><a href="https://www.linkedin.com/in/henry-vo-26b624119/">LinkedIn</a></li>
+<li><a href="https://github.com/lightningclear">Github</a></li>
+<li> E-mail: vohenry777@gmail.com</li>
+</ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## ACKNOWLEDGMENTS
+
+<p align="right">(<a href="#top">back to top</a>)</p>
