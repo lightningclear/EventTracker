@@ -1,3 +1,4 @@
+import { Router, RouterModule } from '@angular/router';
 import { CampingService } from './../../service/camping.service';
 import { Camping } from './../../models/camping';
 import { Component, OnInit } from '@angular/core';
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   camps: Camping[] = [];
 
-  constructor(private campSvc: CampingService) { }
+  constructor(private campSvc: CampingService, private router: Router) { }
 
   // getNumOfTodos() {
   //   return this.incompletePipe.transform(this.camps, this.Camping).length;
@@ -38,21 +39,15 @@ export class HomeComponent implements OnInit {
     this.selected = camp;
   }
 
-  addTodo(){
-    this.campSvc.create(this.newCamp).subscribe(
-      data => {
-        this.reload();
-        this.newCamp = new Camping();
-      },
-      err => console.log(err)
-    );
+  addCamp(){
+    this.router.navigateByUrl("/createCamp");
   }
 
-  setEditTodo() {
+  setEditCamp() {
     this.editCamp = Object.assign({}, this.selected);
   }
 
-  updateTodo(camp: Camping){
+  updateCamp(camp: Camping){
     this.campSvc.update(camp).subscribe(
       data => {
         this.reload();
@@ -62,7 +57,7 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  deleteTodo(id: number) {
+  deleteCamp(id: number) {
     this.campSvc.destroy(id).subscribe(
       data => this.reload(),
       err => console.log(err)

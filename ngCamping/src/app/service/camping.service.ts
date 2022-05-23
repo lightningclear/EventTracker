@@ -3,21 +3,24 @@ import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
-import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CampingService {
 
-  private baseUrl = 'http://localhost:4202/';
+  private baseUrl = 'http://localhost:8087/';
   private url = environment.baseUrl + 'api/camp';
 
   newCamp: Camping = new Camping();
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) { }
+
+  // getNumOfCamps() {
+  //   return this.incompletePipe.transform(this.todos, this.showComplete).length;
+  // }
 
   show(id: number){
     return this.http.get<Camping>(this.url + '/' + id)
@@ -50,7 +53,7 @@ export class CampingService {
   }
 
   update(camp: Camping){
-    return this.http.put<Camping>(this.url + '/' + camp.Id, camp)
+    return this.http.put<Camping>(this.url + '/' + camp.id, camp)
     .pipe(
       catchError((err: any) => {
         console.log(err);

@@ -1,0 +1,13 @@
+
+<div>
+  <form>
+    Name: <input type="text" name="task" [(ngModel)]="editCamp.name">
+    location: <input type="text" name="description" [(ngModel)]="editCamp.location">
+    date: <input type="text" name="description" [(ngModel)]="editCamp.date">
+    distance: <input type="text" name="description" [(ngModel)]="editCamp.distance">
+    price: <input type="text" name="description" [(ngModel)]="editCamp.price">
+    <button (click)="addCamp(editCamp)">Save</button>
+    <button (click)="goHome()">Cancel</button>
+
+  </form>
+</div>

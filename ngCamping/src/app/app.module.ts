@@ -9,12 +9,16 @@ import{HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { CreateCampComponent } from './component/create-camp/create-camp.component';
+import { IncompletePipe } from './pipes/incomplete.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateCampComponent,
+    IncompletePipe
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,7 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
     NgbModule
   ],
   providers: [
-    CampingService
+    CampingService,
   ],
   bootstrap: [AppComponent]
 })

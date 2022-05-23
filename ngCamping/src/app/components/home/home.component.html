@@ -1,2 +1,42 @@
 <p>home works!</p>
 <h1>potato potato</h1>
+<!-- <h1>{{title}} <span [ngClass]="checkWarning()">{{getNumOfTodos()}}</span></h1> -->
+<div>
+<table *ngIf="!selected" class="table table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>name</th>
+      <th>location</th>
+      <th>date</th>
+      <th>distance</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="camp.name ? 'completed' : '' " *ngFor="let camp of camps">
+      <td class='task' (click)="displayCamp(camp)">{{camp.name}}</td>
+      <td><input type="checkbox" name="completed" (change)="updateCamp(camp)" [(ngModel)]="camp.name" /></td>
+      <td>{{camp.location}}</td>
+      <td><button class="btn btn-danger"(click)="updateCamp(camp)">Update Camp</button></td>
+      <td><button class="btn btn-danger"(click)="deleteCamp(camp.id)">X</button></td>
+    </tr>
+  </tbody>
+</table>
+<td><button class="btn btn-danger"(click)="addCamp()">Add Camp</button></td>
+
+<!-- Show Completed? <input type="checkbox" name="showComplete"  [(ngModel)]="showComplete"/>
+<form *ngIf="!selected">
+  <input type="text" name="task" [(ngModel)]="newTodo.task">
+  <input class="btn btn-success" type="submit" name="submit" value="Add Todo" (click)="addTodo()">
+</form> -->
+</div>
+<div *ngIf="selected && !editCamp">
+  <p>{{selected.id}}</p>
+  <p>{{selected.name}</p>
+  <p>{{selected.location}}</p>
+  <p>{{selected.date}}</p>
+  <p>{{selected.distance}}</p>
+  <p>{{selected.price}}</p>
+  <button (click)="setEditCamp()">Edit</button>
+  <!-- <button (click)="displayTable()">Back</button> -->
+</div>
