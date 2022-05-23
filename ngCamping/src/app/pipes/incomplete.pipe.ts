@@ -1,3 +1,4 @@
+import { Camping } from 'src/app/models/camping';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,8 +6,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class IncompletePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(camps: Camping[], distance:  number): Camping[] {
+
+    if(distance == 0){
+      return camps;
+    }
+
+    return camps.filter(camp =>
+      camp.distance == distance
+    );
   }
+
+
+
 
 }

@@ -1,13 +1,16 @@
 
 <div>
   <form>
-    Name: <input type="text" name="task" [(ngModel)]="editCamp.name">
-    location: <input type="text" name="description" [(ngModel)]="editCamp.location">
-    date: <input type="text" name="description" [(ngModel)]="editCamp.date">
-    distance: <input type="text" name="description" [(ngModel)]="editCamp.distance">
-    price: <input type="text" name="description" [(ngModel)]="editCamp.price">
+    Name: <input type="text" name="task" [(ngModel)]="editCamp.name"><br><br>
+    location: <input type="text" name="description" [(ngModel)]="editCamp.location">  <br><br>
+    date: <input type="date" name="description" [(ngModel)]="editCamp.date"><br><br>
+    distance: <input type="text" name="description" [(ngModel)]="editCamp.distance"><br><br>
+    price: <input type="text" name="description" [(ngModel)]="editCamp.price"><br>
     <button (click)="addCamp(editCamp)">Save</button>
     <button (click)="goHome()">Cancel</button>
+
+    <p>Please enter a Name, Location, Approximate Distance and Estimated Price for the Camping Trip. <br>
+    to return home, press the cancel button.</p>
 
   </form>
 </div>

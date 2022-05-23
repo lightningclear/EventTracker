@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { CreateCampComponent } from './component/create-camp/create-camp.component';
 import { IncompletePipe } from './pipes/incomplete.pipe';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { IncompletePipe } from './pipes/incomplete.pipe';
   ],
   providers: [
     CampingService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

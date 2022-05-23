@@ -2,6 +2,7 @@ import { Router, RouterModule } from '@angular/router';
 import { CampingService } from './../../service/camping.service';
 import { Camping } from './../../models/camping';
 import { Component, OnInit } from '@angular/core';
+import { IncompletePipe } from './../../pipes/incomplete.pipe';
 
 @Component({
   selector: 'app-home',
@@ -18,11 +19,26 @@ export class HomeComponent implements OnInit {
 
   camps: Camping[] = [];
 
+  distance = 0;
+
+  incompletePipe:IncompletePipe = new IncompletePipe();
+
   constructor(private campSvc: CampingService, private router: Router) { }
 
-  // getNumOfTodos() {
-  //   return this.incompletePipe.transform(this.camps, this.Camping).length;
-  // }
+  getNumOfCamps() {
+    return this.incompletePipe.transform(this.camps, 0).length;
+  }
+
+  checkWarning() {
+    let numOfTodos = this.getNumOfCamps();
+    if(numOfTodos >= 10) {
+      return 'badge bg-danger';
+    } else if(numOfTodos >= 5) {
+      return 'badge bg-warning';
+    } else {
+      return 'badge bg-success'
+    }
+  }
 
   reload() {
     this.campSvc.index().subscribe(
